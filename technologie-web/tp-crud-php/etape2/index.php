@@ -1,6 +1,9 @@
 <?php
 require_once '../config.php';
 
+// Redirection /etape2 -> /etape2/ (nécessaire pour les liens relatifs)
+ensureTrailingSlash();
+
 $pdo = getConnection();
 
 // Rôles autorisés et action demandée (routage par paramètre GET)

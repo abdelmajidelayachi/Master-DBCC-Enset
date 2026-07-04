@@ -1,6 +1,9 @@
 <?php
 require_once '../config.php';
 
+// Redirection /etape1 -> /etape1/ (nécessaire pour les liens relatifs)
+ensureTrailingSlash();
+
 // Connexion à la base de données
 $pdo = getConnection();
 

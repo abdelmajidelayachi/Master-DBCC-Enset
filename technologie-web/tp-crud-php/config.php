@@ -38,6 +38,18 @@ function validateEmail($email) {
     return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
+// Redirige /dossier vers /dossier/ pour que les liens relatifs fonctionnent
+// (le serveur PHP intégré sert l'index sans ajouter le slash final)
+function ensureTrailingSlash() {
+    $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $dir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+    if ($dir !== '' && $path === $dir) {
+        $query = $_SERVER['QUERY_STRING'] ?? '';
+        header('Location: ' . $path . '/' . ($query !== '' ? '?' . $query : ''), true, 301);
+        exit;
+    }
+}
+
 // Fonction pour nettoyer les données
 function cleanInput($data) {
     $data = trim($data);

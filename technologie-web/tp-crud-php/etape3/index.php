@@ -1,3 +1,9 @@
+<?php
+require_once '../config.php';
+
+// Redirection /etape3 -> /etape3/ (nécessaire pour que fetch('api.php') fonctionne)
+ensureTrailingSlash();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
