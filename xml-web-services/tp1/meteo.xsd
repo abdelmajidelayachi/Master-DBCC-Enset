@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Schéma XML du document meteo -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+  <!-- Élément racine -->
+  <xs:element name="meteo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="mesure" type="typeMesure" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Une mesure : une date + une ou plusieurs villes -->
+  <xs:complexType name="typeMesure">
+    <xs:sequence>
+      <xs:element name="ville" type="typeVille" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="date" type="xs:date" use="required"/>
+  </xs:complexType>
+
+  <!-- Une ville : un nom + une température -->
+  <xs:complexType name="typeVille">
+    <xs:attribute name="nom" type="xs:string" use="required"/>
+    <xs:attribute name="temperature" type="typeTemperature" use="required"/>
+  </xs:complexType>
+
+  <!-- Température : entier borné (valeurs plausibles en °C) -->
+  <xs:simpleType name="typeTemperature">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="-50"/>
+      <xs:maxInclusive value="60"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

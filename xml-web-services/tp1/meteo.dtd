@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD du document meteo :
+     - meteo  : racine, contient une ou plusieurs mesures
+     - mesure : qualifiée par une date, contient une ou plusieurs villes
+     - ville  : élément vide, qualifié par un nom et une température -->
+
+<!ELEMENT meteo (mesure+)>
+
+<!ELEMENT mesure (ville+)>
+<!ATTLIST mesure
+          date CDATA #REQUIRED>
+
+<!ELEMENT ville EMPTY>
+<!ATTLIST ville
+          nom         CDATA #REQUIRED
+          temperature CDATA #REQUIRED>
