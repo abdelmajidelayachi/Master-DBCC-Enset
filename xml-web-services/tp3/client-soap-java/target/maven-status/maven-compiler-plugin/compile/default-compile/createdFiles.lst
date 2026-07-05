@@ -1,0 +1,12 @@
+dev/elayachi/client/stubs/ObjectFactory.class
+dev/elayachi/client/ClientSoapJava.class
+dev/elayachi/client/stubs/GetComptesResponse.class
+dev/elayachi/client/stubs/ConversionEuroToDH.class
+dev/elayachi/client/stubs/GetCompteResponse.class
+dev/elayachi/client/stubs/package-info.class
+dev/elayachi/client/stubs/GetComptes.class
+dev/elayachi/client/stubs/Compte.class
+dev/elayachi/client/stubs/GetCompte.class
+dev/elayachi/client/stubs/ConversionEuroToDHResponse.class
+dev/elayachi/client/stubs/BanqueService.class
+dev/elayachi/client/stubs/BanqueWS.class
