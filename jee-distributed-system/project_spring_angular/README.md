@@ -97,3 +97,23 @@ cd frontend && npm run build
 Note : `@DataJpaTest` est configuré avec `spring.test.database.replace=NONE` car
 la base embarquée de remplacement de Spring Boot 4.0.7 est créée sans
 `DB_CLOSE_DELAY=-1` et disparaît entre deux connexions.
+
+## screen du frontend: 
+### login
+<img width="2836" height="1566" alt="brave_screenshot_localhost (6)" src="https://github.com/user-attachments/assets/ae7c22aa-4988-42f1-a5a4-a1ae678ce36d" />
+
+### Dashboard:
+<img width="2954" height="1540" alt="brave_screenshot_localhost (2)" src="https://github.com/user-attachments/assets/1ade2a1a-63bd-4da0-bd2c-f43fd1457d2f" />
+
+### Clients
+<img width="2728" height="1506" alt="brave_screenshot_localhost (3)" src="https://github.com/user-attachments/assets/c12c8358-49f1-40fd-b8e6-737d5eb2f9c8" />
+
+### Comptes 
+<img width="2694" height="1554" alt="brave_screenshot_localhost (4)" src="https://github.com/user-attachments/assets/38d5473c-4e30-4b7b-a9b9-0a55b0c1f932" />
+
+### chatBot
+<img width="2590" height="1500" alt="brave_screenshot_localhost (5)" src="https://github.com/user-attachments/assets/58c97020-f95f-4205-ae47-005b2603e6f3" />
+
+### telegram chat bot
+<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/cfebafe9-51e1-4703-9b2a-022500ed6a10" />
+
