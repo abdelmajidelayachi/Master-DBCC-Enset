@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Fichier de configuration du MINI FRAMEWORK (lu avec JAXB) -->
+<beans>
+
+    <!-- Le bean DAO, sans dépendances -->
+    <bean id="dao" class="dev.elayachi.app.dao.DaoImpl"/>
+
+    <!-- 1. Injection via le CONSTRUCTEUR -->
+    <bean id="metierConstructeur" class="dev.elayachi.app.metier.MetierImpl">
+        <constructor-arg ref="dao"/>
+    </bean>
+
+    <!-- 2. Injection via le SETTER -->
+    <bean id="metierSetter" class="dev.elayachi.app.metier.MetierImpl">
+        <property name="dao" ref="dao"/>
+    </bean>
+
+    <!-- 3. Injection directe dans l'ATTRIBUT (Field) -->
+    <bean id="metierField" class="dev.elayachi.app.metier.MetierImpl">
+        <field name="dao" ref="dao"/>
+    </bean>
+
+</beans>
