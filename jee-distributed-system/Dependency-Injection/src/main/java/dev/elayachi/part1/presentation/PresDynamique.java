@@ -4,6 +4,8 @@ import dev.elayachi.part1.dao.IDao;
 import dev.elayachi.part1.metier.IMetier;
 
 import java.io.File;
+import java.io.InputStream;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -15,7 +17,7 @@ import java.util.Scanner;
  */
 public class PresDynamique {
     public static void main(String[] args) throws Exception {
-        Scanner scanner = new Scanner(new File("config.txt"));
+        Scanner scanner = openConfig();
 
         // 1. Instancier dynamiquement le DAO
         String daoClassName = scanner.nextLine();
@@ -33,5 +35,20 @@ public class PresDynamique {
 
         System.out.println("Résultat = " + metier.calcul());
         scanner.close();
+    }
+
+    /**
+     * Cherche config.txt d'abord dans le répertoire courant (modifiable
+     * sans recompiler), sinon dans le classpath (src/main/resources).
+     * Le répertoire courant dépend de l'endroit d'où on lance le programme
+     * (IDE ou terminal), d'où ce double emplacement.
+     */
+    private static Scanner openConfig() throws Exception {
+        File file = new File("config.txt");
+        if (file.exists()) {
+            return new Scanner(file);
+        }
+        InputStream in = PresDynamique.class.getClassLoader().getResourceAsStream("config.txt");
+        return new Scanner(Objects.requireNonNull(in, "config.txt introuvable"));
     }
 }
