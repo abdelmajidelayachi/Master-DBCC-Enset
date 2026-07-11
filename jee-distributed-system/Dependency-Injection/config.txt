@@ -1,0 +1,2 @@
+dev.elayachi.part1.ext.DaoImplV2
+dev.elayachi.part1.metier.MetierImpl

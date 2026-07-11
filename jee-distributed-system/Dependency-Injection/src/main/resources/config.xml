@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Déclaration du bean DAO -->
+    <bean id="dao" class="dev.elayachi.part1.dao.DaoImpl"/>
+
+    <!-- Déclaration du bean Métier avec injection du DAO via le setter -->
+    <bean id="metier" class="dev.elayachi.part1.metier.MetierImpl">
+        <property name="dao" ref="dao"/>
+    </bean>
+
+</beans>
