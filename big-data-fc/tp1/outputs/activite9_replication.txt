@@ -1,0 +1,23 @@
+=== setrep -w 2 ventes_janvier.csv ===
+Replication 2 set: /datalake/ventes/raw/ventes_janvier.csv
+Waiting for /datalake/ventes/raw/ventes_janvier.csv ...
+WARNING: the waiting time may be long for DECREASING the number of replications.
+. done
+=== fsck apres setrep 2 ===
+/datalake/ventes/raw/ventes_janvier.csv 378 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-494732249-172.19.0.8-1783879466631:blk_1073741825_1001 len=378 Live_repl=2  [DatanodeInfoWithStorage[172.19.0.6:9866,DS-806cc041-2e85-4b94-9b18-7aa189f38c87,DISK], DatanodeInfoWithStorage[172.19.0.3:9866,DS-2c7dd86a-67e8-447c-99e0-371569b50e9e,DISK]]
+Status: HEALTHY
+=== retour a setrep 3 pour les trois fichiers ===
+Replication 3 set: /datalake/ventes/raw/ventes_janvier.csv
+Waiting for /datalake/ventes/raw/ventes_janvier.csv .... done
+Replication 3 set: /datalake/ventes/raw/ventes_fevrier.csv
+Waiting for /datalake/ventes/raw/ventes_fevrier.csv ... done
+Replication 3 set: /datalake/ventes/raw/ventes_mars.csv
+Waiting for /datalake/ventes/raw/ventes_mars.csv ... done
+=== fsck zone raw apres setrep 3 ===
+/datalake/ventes/raw/ventes_fevrier.csv 373 bytes, replicated: replication=3, 1 block(s):  OK
+/datalake/ventes/raw/ventes_janvier.csv 378 bytes, replicated: replication=3, 1 block(s):  OK
+/datalake/ventes/raw/ventes_mars.csv 382 bytes, replicated: replication=3, 1 block(s):  OK
+Status: HEALTHY
+ Average block replication:	3.0
+ Average block group size:	0.0

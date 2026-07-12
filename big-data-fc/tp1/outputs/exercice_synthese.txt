@@ -1,0 +1,65 @@
+=== 5. hdfs dfs -cat /exercice/raw/clients.csv ===
+id_client,nom,ville,pays
+1,Ahmed,Casablanca,Maroc
+2,Fatima,Rabat,Maroc
+3,Youssef,Fes,Maroc
+4,Sara,Marrakech,Maroc
+=== 7. ls -lh /tmp/export_exercice ===
+total 4.0K
+-rw-r--r-- 1 hadoop users 114 Jul 12 18:20 clients.csv
+=== 8. hdfs dfs -du -h /exercice/raw ===
+114  342  /exercice/raw/clients.csv
+=== 10. setrep 3 ===
+Replication 3 set: /exercice/raw/clients.csv
+Waiting for /exercice/raw/clients.csv ... done
+=== LIVRABLE: hdfs dfs -ls -R /exercice ===
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:20 /exercice/archive
+-rw-r--r--   3 hadoop supergroup        114 2026-07-12 18:20 /exercice/archive/clients.csv
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:19 /exercice/export
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:19 /exercice/raw
+-rw-r--r--   3 hadoop supergroup        114 2026-07-12 18:19 /exercice/raw/clients.csv
+=== LIVRABLE: hdfs fsck /exercice/raw/clients.csv -files -blocks -locations ===
+FSCK started by hadoop (auth:SIMPLE) from /172.19.0.8 for path /exercice/raw/clients.csv at Sun Jul 12 18:20:11 UTC 2026
+
+/exercice/raw/clients.csv 114 bytes, replicated: replication=3, 1 block(s):  OK
+0. BP-494732249-172.19.0.8-1783879466631:blk_1073741832_1008 len=114 Live_repl=3  [DatanodeInfoWithStorage[172.19.0.2:9866,DS-9e296341-a454-4deb-9233-31f6273de6bf,DISK], DatanodeInfoWithStorage[172.19.0.3:9866,DS-2c7dd86a-67e8-447c-99e0-371569b50e9e,DISK], DatanodeInfoWithStorage[172.19.0.5:9866,DS-b1770f5f-dc27-4c19-a40e-dd3975c0a093,DISK]]
+
+
+Status: HEALTHY
+ Number of data-nodes:	5
+ Number of racks:		1
+ Total dirs:			0
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	114 B
+ Total files:	1
+ Total blocks (validated):	1 (avg. block size 114 B)
+ Minimally replicated blocks:	1 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	3
+ Average block replication:	3.0
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Sun Jul 12 18:20:11 UTC 2026 in 2 milliseconds
+
+
+The filesystem under path '/exercice/raw/clients.csv' is HEALTHY

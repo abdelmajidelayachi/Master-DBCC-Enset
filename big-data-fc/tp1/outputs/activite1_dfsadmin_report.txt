@@ -1,0 +1,122 @@
+Configured Capacity: 4889218478080 (4.45 TB)
+Present Capacity: 4571460280320 (4.16 TB)
+DFS Remaining: 4571460157440 (4.16 TB)
+DFS Used: 122880 (120 KB)
+DFS Used%: 0.00%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (5):
+
+Name: 172.19.0.2:9866 (tp1-datanode3-1.tp1_default)
+Hostname: datanode3
+Decommission Status : Normal
+Configured Capacity: 977843695616 (910.69 GB)
+DFS Used: 24576 (24 KB)
+Non DFS Used: 13804417024 (12.86 GB)
+DFS Remaining: 914292031488 (851.50 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 93.50%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Jul 12 18:05:04 UTC 2026
+Last Block Report: Sun Jul 12 18:04:31 UTC 2026
+Num of Blocks: 0
+
+
+Name: 172.19.0.3:9866 (tp1-datanode1-1.tp1_default)
+Hostname: datanode1
+Decommission Status : Normal
+Configured Capacity: 977843695616 (910.69 GB)
+DFS Used: 24576 (24 KB)
+Non DFS Used: 13804417024 (12.86 GB)
+DFS Remaining: 914292031488 (851.50 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 93.50%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Jul 12 18:05:04 UTC 2026
+Last Block Report: Sun Jul 12 18:04:31 UTC 2026
+Num of Blocks: 0
+
+
+Name: 172.19.0.5:9866 (tp1-datanode2-1.tp1_default)
+Hostname: datanode2
+Decommission Status : Normal
+Configured Capacity: 977843695616 (910.69 GB)
+DFS Used: 24576 (24 KB)
+Non DFS Used: 13804417024 (12.86 GB)
+DFS Remaining: 914292031488 (851.50 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 93.50%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Jul 12 18:05:04 UTC 2026
+Last Block Report: Sun Jul 12 18:04:31 UTC 2026
+Num of Blocks: 0
+
+
+Name: 172.19.0.6:9866 (tp1-datanode4-1.tp1_default)
+Hostname: datanode4
+Decommission Status : Normal
+Configured Capacity: 977843695616 (910.69 GB)
+DFS Used: 24576 (24 KB)
+Non DFS Used: 13804417024 (12.86 GB)
+DFS Remaining: 914292031488 (851.50 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 93.50%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Jul 12 18:05:04 UTC 2026
+Last Block Report: Sun Jul 12 18:04:31 UTC 2026
+Num of Blocks: 0
+
+
+Name: 172.19.0.7:9866 (tp1-datanode5-1.tp1_default)
+Hostname: datanode5
+Decommission Status : Normal
+Configured Capacity: 977843695616 (910.69 GB)
+DFS Used: 24576 (24 KB)
+Non DFS Used: 13804417024 (12.86 GB)
+DFS Remaining: 914292031488 (851.50 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 93.50%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Jul 12 18:05:04 UTC 2026
+Last Block Report: Sun Jul 12 18:04:31 UTC 2026
+Num of Blocks: 0
+
+

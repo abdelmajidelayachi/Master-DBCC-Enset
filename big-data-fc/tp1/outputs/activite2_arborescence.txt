@@ -1,0 +1,15 @@
+=== hdfs dfs -ls / ===
+Found 2 items
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:06 /atelier
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:06 /datalake
+=== hdfs dfs -ls /atelier ===
+Found 4 items
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:06 /atelier/archive
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:06 /atelier/input
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:06 /atelier/logs
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:06 /atelier/output
+=== hdfs dfs -ls -R /datalake ===
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:06 /datalake/ventes
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:06 /datalake/ventes/archive
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:06 /datalake/ventes/processed
+drwxr-xr-x   - hadoop supergroup          0 2026-07-12 18:06 /datalake/ventes/raw

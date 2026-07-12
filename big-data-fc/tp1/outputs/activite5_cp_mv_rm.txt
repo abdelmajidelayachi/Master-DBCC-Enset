@@ -1,0 +1,11 @@
+=== ls archive apres cp ===
+Found 3 items
+-rw-r--r--   3 hadoop supergroup        373 2026-07-12 18:14 /datalake/ventes/archive/ventes_fevrier.csv
+-rw-r--r--   3 hadoop supergroup        378 2026-07-12 18:14 /datalake/ventes/archive/ventes_janvier.csv
+-rw-r--r--   3 hadoop supergroup        382 2026-07-12 18:14 /datalake/ventes/archive/ventes_mars.csv
+=== ls /atelier/input apres mv ===
+=== ls /atelier/archive apres mv ===
+Found 1 items
+-rw-r--r--   3 hadoop supergroup         19 2026-07-12 18:14 /atelier/archive/test.txt
+Deleted /atelier/archive/test.txt
+=== ls /atelier/archive apres rm ===

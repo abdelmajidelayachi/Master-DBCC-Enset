@@ -1,0 +1,12 @@
+=== ls -lh /tmp/datasets ===
+total 12K
+-rw-r--r-- 1 hadoop users 373 Jul 12 18:07 ventes_fevrier.csv
+-rw-r--r-- 1 hadoop users 378 Jul 12 18:07 ventes_janvier.csv
+-rw-r--r-- 1 hadoop users 382 Jul 12 18:07 ventes_mars.csv
+=== cat ventes_janvier.csv ===
+id_vente,date_vente,client,ville,categorie,produit,quantite,prix_unitaire,montant
+1,2026-01-03,Ahmed,Casablanca,Informatique,Ordinateur,1,8500,8500
+2,2026-01-05,Fatima,Rabat,Bureautique,Imprimante,1,2300,2300
+3,2026-01-09,Youssef,Fes,Accessoire,Clavier,2,175,350
+4,2026-01-15,Sara,Marrakech,Accessoire,Souris,3,60,180
+5,2026-01-21,Omar,Casablanca,Informatique,Ecran,1,2200,2200

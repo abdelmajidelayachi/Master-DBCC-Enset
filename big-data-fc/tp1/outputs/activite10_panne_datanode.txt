@@ -1,0 +1,38 @@
+=== docker compose stop datanode5 ===
+=== dfsadmin -report (datanode5 arrete) ===
+Live datanodes (5):
+=== lecture du fichier malgre la panne ===
+id_vente,date_vente,client,ville,categorie,produit,quantite,prix_unitaire,montant
+1,2026-01-03,Ahmed,Casablanca,Informatique,Ordinateur,1,8500,8500
+2,2026-01-05,Fatima,Rabat,Bureautique,Imprimante,1,2300,2300
+3,2026-01-09,Youssef,Fes,Accessoire,Clavier,2,175,350
+4,2026-01-15,Sara,Marrakech,Accessoire,Souris,3,60,180
+5,2026-01-21,Omar,Casablanca,Informatique,Ecran,1,2200,2200
+=== fsck zone raw pendant la panne ===
+/datalake/ventes/raw/ventes_fevrier.csv 373 bytes, replicated: replication=3, 1 block(s):  OK
+/datalake/ventes/raw/ventes_janvier.csv 378 bytes, replicated: replication=3, 1 block(s):  OK
+/datalake/ventes/raw/ventes_mars.csv 382 bytes, replicated: replication=3, 1 block(s):  OK
+Status: HEALTHY
+=== Derniers contacts des DataNodes (datanode5 ne repond plus) ===
+Name: 172.19.0.2:9866 (tp1-datanode3-1.tp1_default)
+Hostname: datanode3
+Last contact: Sun Jul 12 18:18:55 UTC 2026
+Name: 172.19.0.3:9866 (tp1-datanode1-1.tp1_default)
+Hostname: datanode1
+Last contact: Sun Jul 12 18:18:55 UTC 2026
+Name: 172.19.0.5:9866 (tp1-datanode2-1.tp1_default)
+Hostname: datanode2
+Last contact: Sun Jul 12 18:18:55 UTC 2026
+Name: 172.19.0.6:9866 (tp1-datanode4-1.tp1_default)
+Hostname: datanode4
+Last contact: Sun Jul 12 18:18:55 UTC 2026
+Name: 172.19.0.7:9866 (172.19.0.7)
+Hostname: datanode5
+Last contact: Sun Jul 12 18:18:07 UTC 2026
+
+NB: HDFS ne declare un DataNode dead qu apres ~10 min sans heartbeat.
+=== docker compose start datanode5 ===
+ Container tp1-datanode5-1 Starting 
+ Container tp1-datanode5-1 Started 
+=== dfsadmin -report apres redemarrage de datanode5 ===
+Live datanodes (5):
