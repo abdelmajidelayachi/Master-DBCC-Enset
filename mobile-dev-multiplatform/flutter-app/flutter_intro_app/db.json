@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "123456",
+      "password": "1234"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Mohamed",
+      "profile": "https://avatars.githubusercontent.com/u/7803765?s=100",
+      "type": "Professor",
+      "score": 670
+    },
+    {
+      "id": 2,
+      "name": "Youssef",
+      "profile": "https://avatars.githubusercontent.com/u/43423207?s=100",
+      "type": "Developer",
+      "score": 750
+    },
+    {
+      "id": 3,
+      "name": "Alaa",
+      "profile": "https://avatars.githubusercontent.com/u/29395009?s=100",
+      "type": "Student",
+      "score": 1200
+    }
+  ],
+  "messages": [
+    {
+      "id": 36,
+      "contactID": 2,
+      "message": "Slt",
+      "type": "sent",
+      "date": "2021-02-23 12:52:13.127223"
+    },
+    {
+      "id": 37,
+      "contactID": 2,
+      "message": "OK",
+      "type": "received",
+      "date": "2021-02-23 12:52:13.155122"
+    }
+  ]
+}
