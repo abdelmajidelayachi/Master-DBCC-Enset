@@ -31,6 +31,23 @@ flutter run --dart-define=OWM_API_KEY=votre_cle --dart-define=PIXABAY_API_KEY=vo
 > La clé OpenWeatherMap du support est la clé de démonstration ; pour de
 > vraies données, créez une clé gratuite sur openweathermap.org.
 
+## screenshots 
+### menu 
+![Describe the image here](./screenshots/menu.png)
+
+### meteo 
+![Describe the image here](./screenshots/weather.png)
+
+### Quiz
+![Describe the image here](./screenshots/quiz.png)
+### QR Scanner
+![Describe the image here](./screenshots/qr_scanner.png)
+### image uploader
+![Describe the image here](./screenshots/image_upload.png)
+### db viewer 
+![Describe the image here](./screenshots/db_json.png)
+
+
 ## Backend du chat (json-server)
 
 ```bash
@@ -57,3 +74,5 @@ Après `flutter create .`, ajouter :
 ```bash
 flutter test
 ```
+
+
