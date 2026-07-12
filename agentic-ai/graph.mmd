@@ -1,0 +1,34 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	route_question(route_question)
+	retrieve(retrieve)
+	grade_documents(grade_documents)
+	rewrite_query(rewrite_query)
+	web_search(web_search)
+	generate(generate)
+	direct_answer(direct_answer)
+	calculate(calculate)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> route_question;
+	generate -. &nbsp;end&nbsp; .-> __end__;
+	generate -.-> rewrite_query;
+	grade_documents -.-> generate;
+	grade_documents -.-> rewrite_query;
+	grade_documents -.-> web_search;
+	retrieve --> grade_documents;
+	rewrite_query --> retrieve;
+	route_question -. &nbsp;calcul&nbsp; .-> calculate;
+	route_question -. &nbsp;direct&nbsp; .-> direct_answer;
+	route_question -. &nbsp;vectorstore&nbsp; .-> retrieve;
+	route_question -. &nbsp;web&nbsp; .-> web_search;
+	web_search --> generate;
+	calculate --> __end__;
+	direct_answer --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
